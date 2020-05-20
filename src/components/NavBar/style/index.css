@@ -1,0 +1,44 @@
+.nav__list {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgb(88, 86, 86);
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 501px) {
+  .navLargeScreen {
+    display: none;
+  }
+}
+@media (min-width: 501px) {
+  .nav__button {
+    display: none;
+  }
+  .navSmallScreen {
+    display: none;
+  }
+}
+.navS__link {
+  list-style-type: none;
+}
+.navS--link {
+  text-align: center;
+}
+
+.nav__link {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.nav--link {
+  float: left;
+}
+.navS--link {
+  float: none;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+}

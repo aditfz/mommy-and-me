@@ -1,0 +1,27 @@
+.workshops {
+  border: none;
+  border-radius: 6px;
+}
+.workshops__title {
+  font-family: 'OpenSans';
+  font-size: 2vw;
+  background-color: rgb(177, 202, 226);
+  padding: 40px;
+  text-align: center;
+}
+
+.workshops {
+  width: 100%;
+}
+.workshops__image {
+  display: block;
+  width: 40%;
+  float: left;
+}
+
+.workshops__text {
+  line-height: 5vw;
+  text-align: center;
+  font-size: 2.7vw;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}

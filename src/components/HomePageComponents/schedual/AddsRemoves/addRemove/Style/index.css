@@ -1,0 +1,17 @@
+.SchedualCon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin: 5px 0;
+}
+.SchedualCon button {
+  display: block;
+  font: 1vw;
+  cursor: pointer;
+  padding: 1px;
+  margin: 0, 5px;
+  width: 80px;
+}
+.llabel {
+  margin: 3px;
+}

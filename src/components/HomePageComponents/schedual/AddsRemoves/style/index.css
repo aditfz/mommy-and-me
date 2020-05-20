@@ -1,0 +1,8 @@
+.SchedualCons {
+  width: 30%;
+  display: grid;
+  grid-template-rows: 20px, 1fr, 20px;
+  padding: 10px 0;
+  background-color: turquoise;
+  font-size: 1.5vw;
+}

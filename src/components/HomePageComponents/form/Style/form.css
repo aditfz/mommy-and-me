@@ -1,0 +1,86 @@
+.total {
+  height: 373px;
+  width: 270px;
+  line-height: 1;
+  position: fixed;
+  top: 174px;
+  right: -272px;
+}
+.feedback {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  float: left;
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  transition: ease-in-out;
+  height: 373px;
+  width: 270px;
+  line-height: 1;
+  position: fixed;
+  top: 174px;
+  right: -110px;
+}
+
+.feedback__button {
+  background-color: rgb(12, 201, 106);
+  color: white;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 0px;
+  margin-right: 0px;
+}
+.ourForm {
+  width: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  grid-row-gap: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(247, 244, 244);
+}
+.feedback__feedback {
+  overflow: hidden;
+  resize: vertical;
+}
+.feedback__button2 {
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+}
+label {
+  font-weight: bold;
+  float: left;
+}
+input {
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px 0;
+}
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px 0;
+}
+.feedback__button__area {
+  background-color: rgb(142, 143, 143);
+  margin-top: 0;
+  display: grid;
+  padding: 20px;
+}
+label {
+  margin-bottom: 2%;
+}

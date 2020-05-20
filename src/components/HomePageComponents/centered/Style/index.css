@@ -1,0 +1,48 @@
+.center {
+  width: 100%;
+  margin-top: -40px;
+}
+.massage {
+  color: rgb(100, 97, 97);
+}
+.phototitle {
+  position: absolute;
+  color: rgb(45, 85, 131);
+  top: 270px;
+  left: 40px;
+  font-family: 'Fredoka One', cursive;
+}
+.center__text {
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Source Sans Pro', cursive;
+  color: rgb(7, 2, 32);
+  padding: 16px;
+}
+.svgphoto {
+  margin-top: 230px;
+  width: 100%;
+  height: 600px;
+}
+.photodiv {
+  background-image: linear-gradient(to left, transparent 0%, white 100%),
+    url('../../../../constants/images/YLEH135.jpg');
+
+  width: 100%;
+  height: 550px;
+  margin-top: 40px;
+  background-size: cover;
+}
+
+.center__image {
+  border: none;
+  opacity: 1;
+  display: block;
+
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}

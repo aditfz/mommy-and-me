@@ -1,0 +1,16 @@
+.header {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-column-gap: 20%;
+  background-color: rgb(150, 243, 228);
+}
+
+.header__logo {
+  width: 100%;
+}
+
+.header__title {
+  font-family: 'Sigmar One', cursive;
+  font-size: 6vw;
+  color: rgb(252, 196, 11);
+}
