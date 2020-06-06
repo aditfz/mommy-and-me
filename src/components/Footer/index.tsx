@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/index.css';
 
-const Footer:React.FC = () => {
+const Footer = () => {
   return (
     <div className='Footer'>
       <img
