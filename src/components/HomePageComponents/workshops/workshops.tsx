@@ -11,6 +11,7 @@ const SwimmingImagesrc=require ('../../../constants/images/swimmerImage.png')
 const Yogasrc=require ('../../../constants/images/yoga.png')
 const YogaImagesrc=require ('../../../constants/images/YogaImage.png')
 
+
 const useStyles = makeStyles((theme) => ({
     tabPanel: {
       width: '100%',
@@ -43,42 +44,66 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     },
   }));
-
+  const CourseDetailes = [
+    {
+      title: 'music',
+      description: 'Music is good',
+      image: MusicImagesrc,
+      day: 'monday',
+      hour: '10-12',
+    },
+    {
+      title: 'Yoga',
+      description: 'Yoga is good',
+      image: YogaImagesrc,
+      day: 'friday',
+      hour: '10-12',
+    },
+    {
+      title: 'Swimming',
+      description: 'swimming is good',
+      image: SwimmingImagesrc,
+      day: 'wednesday',
+      hour: '10-12',
+    },
+    {
+      title: 'art',
+      description: 'art is good',
+      image: PaintImagesrc,
+      day: 'thursday',
+      hour: '10-12',
+    },
+  ];
+  
 export default function () {
     const classes = useStyles();
   
     const [page, setPage] = useState(0);
-    const CourseDetailes = [
-      {
-        title: 'music',
-        description: 'Music is good',
-        image: MusicImagesrc,
-        day: 'monday',
-        hour: '10-12',
-      },
-      {
-        title: 'Yoga',
-        description: 'Yoga is good',
-        image: YogaImagesrc,
-        day: 'friday',
-        hour: '10-12',
-      },
-      {
-        title: 'Swimming',
-        description: 'swimming is good',
-        image: SwimmingImagesrc,
-        day: 'wednesday',
-        hour: '10-12',
-      },
-      {
-        title: 'art',
-        description: 'art is good',
-        image: PaintImagesrc,
-        day: 'thursday',
-        hour: '10-12',
-      },
-    ];
-  
+   
+    const courseinf=[
+
+       {
+            image:Musicsrc,
+            title:'Music',
+            onClick:() => setPage(0),
+            active:page === 0
+        },{
+            image:Yogasrc,
+            title:'Yoga',
+            onClick:() => setPage(1),
+            active:page === 1
+        },{
+            image:Swimmingsrc,
+            title:'Swimming',
+            onClick:() => setPage(2),
+            active:page === 2,
+        },{
+            image:Paintsrc,
+            title:'Art',
+            onClick:() => setPage(3),
+            active:page === 3
+        }
+          ]
     
     return (
       <div>
@@ -92,10 +117,9 @@ export default function () {
         >
           <h2
             style={{
-              margin: 'auto',
+              marginTop: '20',
               backgroundImage:
                 'linear-gradient(to top, rgba(250,157,183, 0.5), rgba(255,255,255, 0.5)',
-              display: 'inline',
               borderRadius: 10,
             }}
           >
@@ -108,30 +132,10 @@ export default function () {
           </p>
         </div>
         <Grid container direction='row' justify='center' alignItems='center'>
-          <Course
-            image={Musicsrc}
-            title='Music'
-            onClick={() => setPage(0)}
-            active={page === 0}
-          />
-          <Course
-            image={Yogasrc}
-            title='Yoga'
-            onClick={() => setPage(1)}
-            active={page === 1}
-          />
-          <Course
-            image={Swimmingsrc}
-            title='Swimming'
-            onClick={() => setPage(2)}
-            active={page === 2}
-          />
-          <Course
-            image={Paintsrc}
-            title='art'
-            onClick={() => setPage(3)}
-            active={page === 3}
-          />
+          {courseinf.map((aCourse=>{
+            return <Course image={aCourse.image} title={aCourse.title} onClick={aCourse.onClick} key={aCourse.title} active={aCourse.active}/>
+          }))}
+         
         </Grid>
         <Grid
           container

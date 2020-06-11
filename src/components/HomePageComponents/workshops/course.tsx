@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f500aa',
   },
   image: {
-    width: 70,
-    height: 70,
+    width: 100,
+    height: 100,
   },
 }));
 
