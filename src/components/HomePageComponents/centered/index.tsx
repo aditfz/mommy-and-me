@@ -1,7 +1,7 @@
 import React from 'react';
 import './Style/index.css';
 import WorkshopsDataText from '../../../constants/WorkshopsData';
-
+const CenterBottemImage= require ('../../../constants/images/center.jpg')
 const Centered:React.FC = () => {
   return (
     <div className='center'>
@@ -10,7 +10,7 @@ const Centered:React.FC = () => {
           {' '}
           <h1>Learn & Play</h1>
           <p className='massage'>
-            We work every day to build the foundations for amazing <br />
+            We work everyday to build the foundations for amazing <br />
             futures, both for child and for our community.
           </p>
         </div>
@@ -31,6 +31,7 @@ const Centered:React.FC = () => {
       <div>
         <p className='center__text'>{WorkshopsDataText['General']}</p>
       </div>
+      <img src={CenterBottemImage} alt='photoCenter' style={{width:"100%"}} />
     </div>
   );
 };
