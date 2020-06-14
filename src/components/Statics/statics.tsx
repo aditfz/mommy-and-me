@@ -1,4 +1,5 @@
-import React ,{useState}from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React ,{useState, useEffect}from 'react'
 
 const Statics:React.FC =()=>{
     const [teacher,setTeacher]=useState(0)
@@ -6,14 +7,25 @@ const Statics:React.FC =()=>{
     const [event,setEvent]=useState(0)
     const [years,setyears]=useState(0)
 
-setInterval(
-   ()=>
-   {if(teacher>5){
-       return
-   }else{
-   setTeacher(teacher+1)}}
-   
-,1000)
+    useEffect(() => {
+        if (teacher === 0) {
+          const teacherInterval = setInterval(() => {
+             
+              setTeacher((teacher) => {
+                if (teacher < 15) {
+                  return teacher + 1;
+                } else {
+                  clearInterval(teacherInterval);
+                  return teacher;
+                }
+              });
+            
+          }, 100);
+        }
+      }, [teacher]);
+ 
+
+
 
     return(
         <div style={{width:"100%", color:"#fff",height:'200px',backgroundColor:'blue', display:'flex',alignItems:'center', justifyContent:"space-around"}}>
