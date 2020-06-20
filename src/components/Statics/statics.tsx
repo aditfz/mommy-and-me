@@ -20,7 +20,7 @@ const Statics:React.FC =()=>{
                 }
               });
             
-          }, 10000/15);
+          }, 8000/15);
         }
       }, [teacher]);
       useEffect(() => {
@@ -36,7 +36,7 @@ const Statics:React.FC =()=>{
                 }
               });
             
-          }, 10000/237);
+          }, 8000/237);
         }
       }, [student]);
       useEffect(() => {
@@ -52,40 +52,31 @@ const Statics:React.FC =()=>{
                 }
               });
             
-          }, 10000/11);
+          }, 8000/11);
         }
       }, [years]);
 
 
 
     return(
-      <div style={{height:300}}>
-        <div style={{width:"100%", color:"#fff",height:'200px',backgroundColor:'blue', display:'flex',alignItems:'center', justifyContent:"space-around"}}>
+      <div style={{width:'100%',height:415,marginTop:100}}>
+        <div style={{width:"100%", color:"#fff",height:'300px',backgroundColor:'#00B8D4', display:'flex',alignItems:'center', justifyContent:"space-around"}}>
 <div style={{display:'flex', flexDirection:"column"}}>
-    <div>{teacher}</div>
-    <div>'Qualified Teachers'</div>
+    <div style={{textAlign:'center',fontSize:60}}>{teacher}</div>
+    <p style={{textAlign:'center',fontSize:25}}>Qualified Teachers</p>
     </div>
     <div style={{display:'flex', flexDirection:"column"}}>
-    <div>{student}</div>
-    <div>'Enrolled Student'</div>
+    <div style={{textAlign:'center',fontSize:60}}>{student}</div>
+    <p style={{textAlign:'center',fontSize:25}}>Enrolled Student</p>
     </div>
     <div style={{display:'flex', flexDirection:"column"}}>
-    <div>{years}</div>
-    <div>'years of experience'</div>
+    <div style={{textAlign:'center',fontSize:60}}>{years}</div>
+    <p style={{textAlign:'center',fontSize:25}}>years of experience</p>
     </div>
-    
-
         </div>
-        <svg style={{width:'100%' ,height:400,marginTop:-210 }}
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1440 320'
-        >
-          <path
-            fill='#00c'
-            fillOpacity='1'
-            d='M0,160L80,154.7C160,149,320,139,480,144C640,149,800,171,960,165.3C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'
-          ></path>
-        </svg>
+        
+        <svg style={{width:'100%' ,height:400,marginTop:-350 }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" 
+        fill-opacity="1" d="M0,224L120,234.7C240,245,480,267,720,277.3C960,288,1200,288,1320,288L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
         </div>
     )
 }
