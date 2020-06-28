@@ -5,7 +5,7 @@ import Menu from './Menu';
 import SearchIcon from '@material-ui/icons/SearchRounded';
 import SearchBox from './Searchbox';
 
-export default function Header() {
+const Header:React.FC=()=> {
   const classes = useStyles();
 
   const [searchBoxIsOpen, setSearchBoxIsOpen] = useState(false);
@@ -43,3 +43,4 @@ export default function Header() {
     </Paper>
   );
 }
+export default Header
