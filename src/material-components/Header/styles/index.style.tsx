@@ -32,6 +32,16 @@ const useStyles = makeStyles((theme) => ({
     width: 44,
     cursor: 'pointer',
   },
+  logoName:{
+[theme.breakpoints.down('sm')]:{
+}
+  },
+  menuIcon:{
+    [theme.breakpoints.up('sm')]:{
+      display:"none"
+    }
+  }
+  ,
   searchBoxItem: {
     position: 'relative',
   },

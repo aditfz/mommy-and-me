@@ -4,6 +4,7 @@ import useStyles from './styles/index.style';
 import Menu from './Menu';
 import SearchIcon from '@material-ui/icons/SearchRounded';
 import SearchBox from './Searchbox';
+import MenuIcon from '@material-ui/icons/Menu';
 const Logo = require('../../constants/images/logo.png')
 const Header:React.FC=()=> {
   const classes = useStyles();
@@ -14,7 +15,9 @@ const searchBoxHandler=()=>{
 }
   return (
     <Paper className={classes.rootPaper}>
-      <Grid container justify='space-between' alignItems='center'>
+      <Grid container justify='space-between' alignItems='center' className={classes.logoName}>
+
+        <Grid item className={classes.menuIcon} ><MenuIcon/></Grid>
         <Grid item >
           <img
             className={classes.logo}
