@@ -4,22 +4,24 @@ import useStyles from './styles/index.style';
 import Menu from './Menu';
 import SearchIcon from '@material-ui/icons/SearchRounded';
 import SearchBox from './Searchbox';
-
+const Logo = require('../../constants/images/logo.png')
 const Header:React.FC=()=> {
   const classes = useStyles();
 
   const [searchBoxIsOpen, setSearchBoxIsOpen] = useState(false);
-
+const searchBoxHandler=()=>{
+  setSearchBoxIsOpen(!searchBoxIsOpen)
+}
   return (
     <Paper className={classes.rootPaper}>
       <Grid container justify='space-between' alignItems='center'>
-        <Grid item>
+        <Grid item >
           <img
             className={classes.logo}
-            src='https://www.graphicsprings.com/filestorage/stencils/9ea51687148f4cfb53737a025d94caaa.png?width=500&height=500'
+            src={Logo}
             alt='logo'
           />
-          <h1 style={{ fontFamily: 'Sigmar One', color: '#f00', margin: '0' }}>
+          <h1 className={classes.name} >
             Mommy & Me
           </h1>
         </Grid>
@@ -31,13 +33,13 @@ const Header:React.FC=()=> {
         <Grid item className={classes.searchBoxItem}>
           <div
             className={classes.searchIconBox}
-            onClick={() => setSearchBoxIsOpen(!searchBoxIsOpen)}
+            onClick={searchBoxHandler}
           >
             <SearchIcon className={classes.searchIcon} />
           </div>
-          {searchBoxIsOpen && (
+          {searchBoxIsOpen && 
             <SearchBox setSearchBoxIsOpen={setSearchBoxIsOpen} />
-          )}
+          }
         </Grid>
       </Grid>
     </Paper>

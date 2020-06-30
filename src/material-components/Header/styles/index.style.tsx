@@ -2,12 +2,21 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   rootPaper: {
     padding: '0 20px',
-    border: 0,
-    zIndex: 1,
+    [theme.breakpoints.down('sm')]:{
+      backgroundColor:'black',
+      color:'white'
+    }
   },
   logo: {
     height: 90,
     marginBottom: 0,
+  },
+  name:{
+    fontFamily: 'Sigmar One',
+     color: '#FFC107',
+    marginTop:-25,
+    fontSize:18,
+    marginLeft:-17
   },
   searchIcon: {
     color: 'white',

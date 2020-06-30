@@ -6,8 +6,7 @@ import SearchIcon from '@material-ui/icons/SearchRounded'
 interface SearchboxProp {
   setSearchBoxIsOpen: (searchBoxIsOpen: boolean) => void
 }
-const SearchBox: React.FC<SearchboxProp> = (props) => {
-  const { setSearchBoxIsOpen } = props
+const SearchBox: React.FC<SearchboxProp> = ({setSearchBoxIsOpen}) => {
   const classes = useStyles()
   const searchBoxRef = useRef<HTMLDivElement>(null)
 
@@ -15,14 +14,14 @@ const SearchBox: React.FC<SearchboxProp> = (props) => {
   useEffect(() => {
     const myFunction = (event: MouseEvent) => {
       if (
-        searchBoxRef &&
+        
         !searchBoxRef.current!.contains(event.target as Node)
       ) {
         setSearchBoxIsOpen(false)
       }
     }
     document.addEventListener('mousedown', myFunction)
-    return () => {
+    return () => {  
       document.removeEventListener('mousedown', myFunction)
     }
   }, [searchBoxRef, setSearchBoxIsOpen])

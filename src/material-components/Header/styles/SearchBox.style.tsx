@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
   searchTextField: {
     outline: 'none',
     border: 'none',
-    flex: 1,
   },
   searchBoxTextFielBox: {
     padding: 12,
