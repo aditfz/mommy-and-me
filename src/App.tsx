@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import HomePage from './screens/HomePage'
-import ContactUS from './screens/ContactUs'
-import Footer from './components/Footer'
-import Header from './material-components/Header'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HomePage from './screens/HomePage';
+import ContactUS from './screens/ContactUs';
+import Footer from './components/Footer';
+import Header from './material-components/Header';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 function App() {
   return (
     <div>
-      <Header />
+      <CssBaseline />
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route exact path='/'>
             <HomePage />
@@ -22,7 +24,7 @@ function App() {
       </BrowserRouter>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

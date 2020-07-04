@@ -9,25 +9,25 @@ function Form() {
   const [feedback, setFeedback] = useState('');
   const [show, setShow] = useState(false);
 
-  const forName = (event:React.FormEvent<HTMLInputElement>) => {
+  const forName = (event: React.FormEvent<HTMLInputElement>) => {
     setName(event.currentTarget.value);
   };
-  const forEmail = (event:React.FormEvent<HTMLInputElement>) => {
+  const forEmail = (event: React.FormEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
   };
-  const forFeedback = (event:React.FormEvent<HTMLTextAreaElement>) => {
+  const forFeedback = (event: React.FormEvent<HTMLTextAreaElement>) => {
     setFeedback(event.currentTarget.value);
   };
-  const ourForm = (event:React.FormEvent<HTMLFormElement>) => {
+  const ourForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const body = {
       name,
       email,
       feedback,
     };
-    request('/feedbacks', 'POST', body).then((response) => {
-      console.log('response', response);
-      if (response === 201) {
+    request('/feedbacks', 'POST', body).then(({ responseCode, json }) => {
+      console.log('response', responseCode);
+      if (responseCode === 201) {
         setName('');
         setEmail('');
         setFeedback('');
